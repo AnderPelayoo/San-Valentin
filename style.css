@@ -1,0 +1,85 @@
+/* corazon */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1e2d3d;
+}
+
+.heart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #ff4757;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #ff4757;
+    animation: animate .6s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80% {
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100% {
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+
+.heart::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 200px;
+    height: 200px;
+    background: #ff4757;
+    border-radius: 50%;
+    box-shadow: -10px 10px 90px #ff4757;
+}
+
+.heart::after {
+    content: '';
+    position: absolute;
+    right: -50%;
+    width: 200px;
+    height: 200px;
+    background: #ff4757;
+    border-radius: 50%;
+    box-shadow: -10px 10px 90px #ff4757;
+}
+
+/* porcentaje */
+
+.percentage {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #ffffff;
+}
+
+
+/*imganes*/
+.img1 {
+    
+    width: 700px;
+    height: 300px;
+}
+
+.img2 {
+    
+    width: 700px;
+    height: 300px;
+}
